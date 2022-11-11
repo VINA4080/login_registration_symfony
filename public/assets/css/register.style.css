@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+    /* border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50px; */
+    /* From https://css.glass */
+    background: rgba(243, 239, 239, 0.19);
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+}
+
+.form-label{
+    font-size: 1.2rem;
+    width: 400px;
+}
+

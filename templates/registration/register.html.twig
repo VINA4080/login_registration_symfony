@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/css/register.style.css') }}">
+    {% endblock %}
+
+{% block nav %}
+    
+{% endblock %}
+{% block body  %}
+    <body>
+        <main class="mx-5">
+            <div class="container register py-5">
+                <h1 class="text-center mb-5">Register</h1>
+                
+            {# afficher un message de confirmation #}
+            {% for message in app.flashes('success') %}
+            <div class="alert alert-success border-success border-2">
+                {{ message }}
+            </div>
+            {% endfor %}
+
+                {{ form_start(registrationForm) }}
+
+                    <div class="">
+                        <label class="form-label first-form-label">{{ form_row(registrationForm.email) }}</label>
+                    </div>
+
+                    <div class="">
+                        <label class="form-label first-form-label">{{ form_row(registrationForm.plainPassword, {label: 'Password'}) }}</label>
+                    </div>
+                    
+                    <div>
+                    {{ form_row(registrationForm.agreeTerms) }}
+                    </div>
+
+                    <button type="submit" class="btn btn-lg btn-info w-100">Register</button>
+                    <div class="text-center mt-3"><a href="{{ path('app_login') }}">I have an account</a></div>
+
+                {{ form_end(registrationForm) }}
+            </div>
+        </main>
+    </body>
+{% endblock %}
